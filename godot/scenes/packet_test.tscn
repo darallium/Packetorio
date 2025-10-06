@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm715r7jm2psb"]
+
+[ext_resource type="Script" uid="uid://c7dprnwfp25bg" path="res://scripts/packet_test.gd" id="1_sxkeu"]
+
+[node name="PacketTest" type="Node2D"]
+script = ExtResource("1_sxkeu")
+
+[node name="PcapLoader" type="PcapLoader" parent="."]

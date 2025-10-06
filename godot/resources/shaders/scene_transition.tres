@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b5tq04nut2oiw"]
+
+[ext_resource type="Shader" uid="uid://p08hrlm7u34n" path="res://resources/shaders/scene_transition.gdshader" id="1_8sfqq"]
+
+[resource]
+shader = ExtResource("1_8sfqq")
+shader_parameter/spacing = 32.0
+shader_parameter/animation_progress = 0.0
+shader_parameter/dot_size = 1.0
+shader_parameter/dot_color = Color(0, 0, 0, 1)
+shader_parameter/reverse = false

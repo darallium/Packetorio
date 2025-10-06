@@ -1,0 +1,16 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.2
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 =     "res://../rust/target/debug/libgdr_mws.so"
+linux.release.x86_64 =   "res://../rust/target/release/libgdr_mws.so"
+windows.debug.x86_64 =   "res://../rust/target/debug/gdr_mws.dll"
+windows.release.x86_64 = "res://../rust/target/release/gdr_mws.dll"
+macos.debug =            "res://../rust/target/debug/libgdr_mws.dylib"
+macos.release =          "res://../rust/target/release/libgdr_mws.dylib"
+macos.debug.arm64 =      "res://../rust/target/debug/libgdr_mws.dylib"
+macos.release.arm64 =    "res://../rust/target/release/libgdr_mws.dylib"
+web.debug.wasm32 = "res://../rust/target/wasm32-unknown-emscripten/release/gdr_mws.wasm"
+web.release.wasm32 = "res://../rust/target/wasm32-unknown-emscripten/release/gdr_mws.wasm"

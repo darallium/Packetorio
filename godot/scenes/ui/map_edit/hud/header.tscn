@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwd6vvc3h1221"]
+
+[ext_resource type="Script" uid="uid://dgn033gqboqek" path="res://scenes/ui/map_edit/hud/header.gd" id="1_n2vsm"]
+
+[node name="header" type="CanvasLayer"]
+script = ExtResource("1_n2vsm")
+
+[node name="TimerLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_top = 8.0
+offset_right = -40.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 16
+text = "120 s"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 8.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 16
+text = "0000"
+horizontal_alignment = 1
+
+[node name="CostLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(120, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 192.0
+offset_top = 281.0
+offset_right = 312.0
+offset_bottom = 296.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 16
+text = "0000"
+horizontal_alignment = 2
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="MessageTimer" type="Timer" parent="."]
+one_shot = true

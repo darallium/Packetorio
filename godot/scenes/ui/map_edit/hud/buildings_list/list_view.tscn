@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://cww15xuqt7r2q"]
+
+[ext_resource type="Script" uid="uid://gxvdel6q4ics" path="res://scenes/ui/map_edit/hud/buildings_list/list_view.gd" id="1_xhq8i"]
+[ext_resource type="Script" uid="uid://3vb8srny3qg6" path="res://scenes/ui/map_edit/hud/buildings_list/scroll_container.gd" id="2_vej4x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhq8i"]
+bg_color = Color(0.145098, 0.145098, 0.145098, 0.705882)
+
+[node name="BuildingList" type="Control"]
+custom_minimum_size = Vector2(640, 40)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -40.0
+offset_bottom = -322.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xhq8i")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xhq8i")
+horizontal_scroll_mode = 3
+script = ExtResource("2_vej4x")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2

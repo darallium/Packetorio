@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtipk641wfjt8"]
+
+[ext_resource type="Script" uid="uid://ch1yv045li741" path="res://scenes/ui/stage/Stage.gd" id="1_e0qdr"]
+[ext_resource type="PackedScene" uid="uid://cp18gsl5c0cmh" path="res://scenes/ui/stage/Tree.tscn" id="2_qnmgq"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e0qdr")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(640, 352)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="SubViewportContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="SubViewportContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 25.0
+offset_right = 73.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.988393, 0.69461)
+text = "Reset"
+
+[node name="HSlider" type="HSlider" parent="SubViewportContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+min_value = 1.0
+max_value = 5.0
+step = 0.25
+value = 1.0
+tick_count = 5
+ticks_on_borders = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="TextureRect"]
+handle_input_locally = false
+size = Vector2i(640, 352)
+render_target_update_mode = 0
+
+[node name="Tree" parent="TextureRect/SubViewport" instance=ExtResource("2_qnmgq")]
+offset_left = 0.0
+offset_top = 198.0
+offset_right = 0.0
+offset_bottom = 198.0
+
+[node name="Camera2D" type="Camera2D" parent="TextureRect/SubViewport"]
+position = Vector2(319, 177)
+
+[connection signal="resized" from="SubViewportContainer" to="." method="_on_ViewportContainer_resized"]
+[connection signal="pressed" from="SubViewportContainer/Control/Button" to="." method="_on_Button_pressed"]
+[connection signal="value_changed" from="SubViewportContainer/HSlider" to="." method="_on_HSlider_value_changed"]

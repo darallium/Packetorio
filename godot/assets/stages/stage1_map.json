@@ -1,0 +1,27 @@
+{
+	"meta": {
+		"width": 25.0,
+		"height": 16.0,
+		"mapname": "チュートリアル1：Hello world",
+		"author": "tutorial",
+		"description": "IPフィルタによるフィルタリングの基本を学びます。",
+		"packetsType": "json",
+		"packetsPath": "res://assets/packets/stage1_packets.json",
+		"tutorial_title": "パケットを届けよう",
+		"tutorial_message": "[INTERNET]から来るパケットを[DATACENTER]へ届けましょう。\nまずは[CONVEYOR]を設置して、パケットの通り道を作ってください。\n\nパケットには、ブロックすべき「悪性パケット」が含まれます。\nどうやら、すべて同じ送信元（IPアドレス）から来ているようです。\n\n[IP_FILTER]を使ってみましょう。\nこれは、指定したIPアドレスからのパケットをブロックする装置です。\n\n悪性パケットの送信元IPアドレスをルールに追加して、\nブロックしてください！"
+	},
+	"buildings": [
+		{
+			"x": 4.0,
+			"y": 4.0,
+			"blockId": 0.0,
+			"rotation": 0.0
+		},
+		{
+			"x": 15.0,
+			"y": 4.0,
+			"blockId": 1.0,
+			"rotation": 0.0
+		}
+	]
+}

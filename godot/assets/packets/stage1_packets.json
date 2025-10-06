@@ -1,0 +1,64 @@
+{
+  "packets": [
+	{
+	  "src_ip": "203.0.113.1",
+	  "dst_ip": "192.168.1.10",
+	  "src_port": 1024.0,
+	  "dst_port": 80.0,
+	  "protocol": 6.0,
+	  "size": 64.0,
+	  "label": "correct",
+	  "timestamp": 100000
+	},
+	{
+	  "src_ip": "198.51.100.5",
+	  "dst_ip": "192.168.1.10",
+	  "src_port": 2048.0,
+	  "dst_port": 80.0,
+	  "protocol": 6.0,
+	  "size": 128.0,
+	  "label": "incorrect",
+	  "timestamp": 250000
+	},
+	{
+	  "src_ip": "203.0.113.2",
+	  "dst_ip": "192.168.1.10",
+	  "src_port": 1025.0,
+	  "dst_port": 443.0,
+	  "protocol": 6.0,
+	  "size": 64.0,
+	  "label": "correct",
+	  "timestamp": 400000
+	},
+	{
+	  "src_ip": "198.51.100.5",
+	  "dst_ip": "192.168.1.10",
+	  "src_port": 2049.0,
+	  "dst_port": 80.0,
+	  "protocol": 6.0,
+	  "size": 128.0,
+	  "label": "incorrect",
+	  "timestamp": 550000
+	},
+	{
+	  "src_ip": "203.0.113.3",
+	  "dst_ip": "192.168.1.10",
+	  "src_port": 1026.0,
+	  "dst_port": 22.0,
+	  "protocol": 6.0,
+	  "size": 64.0,
+	  "label": "correct",
+	  "timestamp": 700000
+	},
+	{
+	  "src_ip": "198.51.100.5",
+	  "dst_ip": "192.168.1.10",
+	  "src_port": 2050.0,
+	  "dst_port": 80.0,
+	  "protocol": 6.0,
+	  "size": 128.0,
+	  "label": "incorrect",
+	  "timestamp": 850000
+	}
+  ]
+}

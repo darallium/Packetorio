@@ -1,0 +1,33 @@
+{
+	"meta": {
+		"width": 25.0,
+		"height": 16.0,
+		"mapname": "チュートリアル4：Deep Packet Inspection",
+		"author": "tutorial",
+		"description": "パケットの内容を分析し、巧妙な攻撃を見抜きます。開放されるのはコンテンツフィルタ",
+		"packetsType": "json",
+		"packetsPath": "res://assets/packets/stage4_packets.json",
+		"tutorial_title": "巧妙な偽装",
+		"tutorial_message": "今回は厄介な相手です。\n悪性パケットが、正常なパケットに偽装しています。\nIPやポート番号だけでは見分けがつきません。\n\n[CONTENT_FILTER]の出番です。\nこれは、パケットの中身のデータを見て、特定の「文字列」を含むものをブロックできます。\n\n悪性パケットの中身をよく観察し、特徴的な文字列（キーワード）を見つけ出してフィルタに設定してください。"
+	},
+	"buildings": [
+		{
+			"x": 4.0,
+			"y": 4.0,
+			"blockId": 0.0,
+			"rotation": 0.0
+		},
+		{
+			"x": 15.0,
+			"y": 2.0,
+			"blockId": 1.0,
+			"rotation": 0.0
+		},
+		{
+			"x": 15.0,
+			"y": 6.0,
+			"blockId": 1.0,
+			"rotation": 0.0
+		}
+	]
+}

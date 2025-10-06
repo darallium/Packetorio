@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0v4isgta7lps"]
+
+[ext_resource type="Script" uid="uid://cfranpmlki7pi" path="res://scenes/ui/map_edit/hud/result_window/building_items_container.gd" id="1_container"]
+[ext_resource type="Texture2D" uid="uid://d3fe53xi5p0kp" path="res://assets/images/datacenter.png" id="2_0tcqw"]
+[ext_resource type="Texture2D" uid="uid://cmihgpmpj6rnq" path="res://assets/images/recycler.png" id="3_nw8n8"]
+[ext_resource type="FontFile" uid="uid://glhdmhuptioq" path="res://assets/fonts/x12y16pxMaruMonica.ttf" id="4_nw8n8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee6ph"]
+atlas = ExtResource("2_0tcqw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ye6nl"]
+atlas = ExtResource("3_nw8n8")
+region = Rect2(0, 0, 16, 16)
+
+[node name="BuildingItemsContainer" type="Control"]
+custom_minimum_size = Vector2(420, 240)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_container")
+datacenter_icon = SubResource("AtlasTexture_ee6ph")
+recyclebin_icon = SubResource("AtlasTexture_ye6nl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="DatacenterColumn" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="DatacenterLabel" type="Label" parent="HBoxContainer/DatacenterColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_fonts/font = ExtResource("4_nw8n8")
+theme_override_font_sizes/font_size = 16
+text = "Datacenter (0)"
+horizontal_alignment = 1
+
+[node name="DatacenterScrollContainer" type="ScrollContainer" parent="HBoxContainer/DatacenterColumn"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="DatacenterList" type="VBoxContainer" parent="HBoxContainer/DatacenterColumn/DatacenterScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="RecycleBinColumn" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="RecycleBinLabel" type="Label" parent="HBoxContainer/RecycleBinColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_fonts/font = ExtResource("4_nw8n8")
+theme_override_font_sizes/font_size = 16
+text = "Recycle Bin (0)"
+horizontal_alignment = 1
+
+[node name="RecycleBinScrollContainer" type="ScrollContainer" parent="HBoxContainer/RecycleBinColumn"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="RecycleBinList" type="VBoxContainer" parent="HBoxContainer/RecycleBinColumn/RecycleBinScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2

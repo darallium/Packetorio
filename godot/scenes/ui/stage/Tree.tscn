@@ -1,0 +1,121 @@
+[gd_scene load_steps=11 format=3 uid="uid://cp18gsl5c0cmh"]
+
+[ext_resource type="PackedScene" uid="uid://y27wlr5ej7x0" path="res://scenes/ui/stage/Node.tscn" id="1"]
+[ext_resource type="Script" uid="uid://chtuonft0ttn" path="res://scenes/ui/stage/Tree.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://dq2d86pulryx4" path="res://assets/images/stages/bg_stages.png" id="4_c4qd4"]
+[ext_resource type="Texture2D" uid="uid://caqskv866fi5s" path="res://assets/images/internet.png" id="4_cft5u"]
+[ext_resource type="Texture2D" uid="uid://d3fe53xi5p0kp" path="res://assets/images/datacenter.png" id="4_kmqnt"]
+[ext_resource type="Texture2D" uid="uid://cw7khcqsi42pn" path="res://assets/images/filters/port-filter.png" id="5_tg820"]
+[ext_resource type="Texture2D" uid="uid://des57y0e0gjmd" path="res://assets/images/stages/stage3.png" id="6_8uddd"]
+[ext_resource type="Texture2D" uid="uid://ctal0h7sxd7pc" path="res://assets/images/filters/content-filter.png" id="8_7a748"]
+[ext_resource type="FontFile" uid="uid://dcn8y544v80id" path="res://assets/fonts/DotGothic16-Regular.ttf" id="9_8uddd"]
+[ext_resource type="PackedScene" uid="uid://doqa6vjfcdi1a" path="res://scenes/ui/sound_button.tscn" id="10_smfas"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -320.0
+offset_right = -320.0
+grow_horizontal = 2
+scale = Vector2(0.4, 0.4)
+script = ExtResource("2")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_repeat = 2
+layout_mode = 1
+offset_left = -180.0
+offset_top = -120.0
+offset_right = 219.0
+offset_bottom = 104.0
+scale = Vector2(5, 5)
+texture = ExtResource("4_c4qd4")
+stretch_mode = 1
+
+[node name="stage1" parent="." instance=ExtResource("1")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 300.0
+offset_top = 360.0
+offset_right = 440.0
+offset_bottom = 496.0
+icon_texture = ExtResource("4_cft5u")
+
+[node name="stage2" parent="." instance=ExtResource("1")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 520.0
+offset_top = 360.0
+offset_right = 660.0
+offset_bottom = 496.0
+icon_texture = ExtResource("5_tg820")
+
+[node name="stage3" parent="." instance=ExtResource("1")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 740.0
+offset_top = 360.0
+offset_right = 880.0
+offset_bottom = 496.0
+icon_texture = ExtResource("6_8uddd")
+
+[node name="stage4" parent="." instance=ExtResource("1")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 960.0
+offset_top = 360.0
+offset_right = 1100.0
+offset_bottom = 496.0
+icon_texture = ExtResource("8_7a748")
+
+[node name="stage5" parent="." instance=ExtResource("1")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1180.0
+offset_top = 360.0
+offset_right = 1320.0
+offset_bottom = 496.0
+icon_texture = ExtResource("4_kmqnt")
+
+[node name="Header" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -180.0
+offset_right = 1820.0
+offset_bottom = 160.0
+color = Color(0.133196, 0.133196, 0.133196, 0.698039)
+
+[node name="Label" type="Label" parent="Header"]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 40.0
+offset_right = 780.0
+offset_bottom = 145.0
+theme_override_fonts/font = ExtResource("9_8uddd")
+theme_override_font_sizes/font_size = 56
+text = "STAGE SELECT"
+
+[node name="BackButton" parent="." instance=ExtResource("10_smfas")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 760.0
+offset_right = 208.0
+offset_bottom = 792.0
+scale = Vector2(2.5, 2.5)
+texts = "もどる"
+
+[connection signal="pressed" from="stage1" to="stage1" method="_on_pressed"]
+[connection signal="pressed" from="stage2" to="stage2" method="_on_pressed"]
+[connection signal="pressed" from="stage3" to="stage3" method="_on_pressed"]
+[connection signal="pressed" from="stage4" to="stage4" method="_on_pressed"]
+[connection signal="pressed" from="stage5" to="stage5" method="_on_pressed"]

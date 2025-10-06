@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://hdsv6h1ukt4g"]
+
+[ext_resource type="Texture2D" uid="uid://bvg2kjwqnjv5q" path="res://assets/images/スプライト-0001.png" id="1_adcbk"]
+[ext_resource type="Texture2D" uid="uid://ck36y08cklkoy" path="res://assets/images/router.png" id="2_syxtx"]
+[ext_resource type="FontFile" uid="uid://ca54y87dnpjpv" path="res://assets/fonts/misaki_gothic.ttf" id="3_7yg5n"]
+
+[node name="Button" type="Button"]
+offset_right = 56.0
+offset_bottom = 24.0
+icon = ExtResource("1_adcbk")
+flat = true
+
+[node name="Router" type="Sprite2D" parent="."]
+position = Vector2(13, 12)
+texture = ExtResource("2_syxtx")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 9.0
+offset_right = 47.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("3_7yg5n")
+theme_override_font_sizes/font_size = 8
+text = "Router"

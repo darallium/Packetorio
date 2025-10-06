@@ -1,0 +1,45 @@
+name: バグ報告
+description: バグを発見した場合の報告にご利用ください。
+title: "[バグ報告] "
+labels: ["bug", "triage"]
+body:
+  - type: input
+    id: branch
+    attributes:
+      label: 発生場所
+      description: バグが発生したブランチ名とコミットハッシュを記述してください。
+      placeholder: "例: fix/etc ブランチ e3b0c44..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 発生内容
+      description: バグが発生した際の詳しい状況を記述してください。スクリーンショットがあれば、ここにドラッグ＆ドロップで添付できます。
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現性
+      description: バグを再現させる手順をできるだけ詳しく記述してください。
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: 緊急性
+      description: |
+        問題の緊急性を選択してください。
+        深刻度（3点満点）と発生可能性（2点満点）の合計で判断します。
+        0=低, 1=中, 2=高, 3<=緊急
+      options:
+        - 低
+        - 中
+        - 高
+        - 緊急
+    validations:
+      required: true

@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhoj83jsrbdeu"]
+
+[ext_resource type="Script" uid="uid://egrgafku4l43" path="res://scenes/tutorial/tutorial_popup.gd" id="1_0vqyl"]
+[ext_resource type="FontFile" uid="uid://b702ysjbxx8ua" path="res://assets/fonts/k8x12.ttf" id="2_egl22"]
+[ext_resource type="PackedScene" uid="uid://doqa6vjfcdi1a" path="res://scenes/ui/sound_button.tscn" id="4_s6h2i"]
+
+[node name="TutorialPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0vqyl")
+
+[node name="BackgroundOverlay" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.498039)
+
+[node name="PopupPanel" type="PanelContainer" parent="BackgroundOverlay"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -75.0
+offset_right = 150.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundOverlay/PopupPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundOverlay/PopupPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TitleLabel" type="Label" parent="BackgroundOverlay/PopupPanel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_egl22")
+theme_override_font_sizes/font_size = 24
+text = "TitleHere"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundOverlay/PopupPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="MessageLabel" type="Label" parent="BackgroundOverlay/PopupPanel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_egl22")
+theme_override_font_sizes/font_size = 12
+text = "The brown fox jumps over white fox"
+autowrap_mode = 2
+
+[node name="OKButton" parent="BackgroundOverlay/PopupPanel/MarginContainer/VBoxContainer" instance=ExtResource("4_s6h2i")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+texts = "OK"

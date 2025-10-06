@@ -1,0 +1,904 @@
+{
+  "packets": [
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54321,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 100000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54322,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 250000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.50",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12345,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 400000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54323,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 550000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54324,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 700000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.51",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12346,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 850000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54325,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 1000000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54326,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 1150000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.52",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12347,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 1300000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54327,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 1450000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54328,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 1600000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.53",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12348,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 1750000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54329,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 1900000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54330,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 2050000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.54",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12349,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 2200000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54331,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 2350000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54332,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 2500000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.55",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12350,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 2650000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54333,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 2800000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54334,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 2950000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.56",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12351,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 3100000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54335,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 3250000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54336,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 3400000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.57",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12352,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 3550000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54337,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 3700000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54338,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 3850000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.58",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12353,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 4000000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54339,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 4150000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54340,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 4300000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.59",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12354,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 4450000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54341,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 4600000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54342,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 4750000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.60",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12355,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 4900000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54343,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 5050000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54344,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 5200000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.61",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12356,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 5350000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54345,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 5500000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54346,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 5650000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.62",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12357,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 5800000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54347,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 5950000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54348,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 6100000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.63",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12358,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 6250000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54349,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 6400000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54350,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 6550000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.64",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12359,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 6700000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54351,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 6850000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54352,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 7000000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.65",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12360,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 7150000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54353,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 7300000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54354,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 7450000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.66",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12361,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 7600000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54355,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 7750000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54356,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 7900000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.67",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12362,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 8050000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54357,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 8200000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54358,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 8350000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.68",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12363,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 8500000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54359,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 8650000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54360,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 8800000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.69",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12364,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 8950000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54361,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 9100000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54362,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 9250000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.70",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12365,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 9400000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54363,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 9550000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54364,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 9700000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.71",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12366,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 9850000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54365,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 10000000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54366,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 10150000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.72",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12367,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 10300000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54367,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 10450000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54368,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 10600000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.73",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12368,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 10750000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54369,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 10900000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54370,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 11050000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.74",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12369,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 11200000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54371,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 11350000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54372,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 11500000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.75",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12370,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 11650000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54373,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 11800000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54374,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 11950000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.76",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12371,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 12100000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54375,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 12250000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54376,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 12400000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.77",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12372,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 12550000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54377,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 12700000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54378,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 12850000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.78",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12373,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 13000000
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54379,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 13150000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "172.16.0.1",
+      "dst_ip": "192.168.1.100",
+      "src_port": 54380,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 1448,
+      "timestamp": 13300000,
+      "label": "incorrect"
+    },
+    {
+      "src_ip": "192.168.1.79",
+      "dst_ip": "192.168.1.100",
+      "src_port": 12374,
+      "dst_port": 21,
+      "protocol": 6,
+      "size": 64,
+      "label": "correct",
+      "timestamp": 13450000
+    }
+  ]
+}

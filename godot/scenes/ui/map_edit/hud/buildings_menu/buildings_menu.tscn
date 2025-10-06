@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcjmjx326e0ij"]
+
+[ext_resource type="Script" uid="uid://udl3inkmpbgj" path="res://scenes/ui/map_edit/hud/buildings_menu/buildings_menu.gd" id="1_586p5"]
+[ext_resource type="PackedScene" uid="uid://hdsv6h1ukt4g" path="res://scenes/ui/map_edit/hud/buildings_menu/router_button.tscn" id="1_tkhk7"]
+[ext_resource type="Texture2D" uid="uid://dk5mxuoyslcaa" path="res://assets/images/buildings_menu_bg.png" id="2_im83g"]
+
+[node name="BuildingMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_586p5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 40.0
+scale = Vector2(2, 0.5)
+texture = ExtResource("2_im83g")
+
+[node name="Button" parent="." instance=ExtResource("1_tkhk7")]
+layout_mode = 0
+offset_left = 14.0
+offset_top = -2.0
+offset_right = 70.0
+offset_bottom = 22.0
+
+[node name="Button2" parent="." instance=ExtResource("1_tkhk7")]
+layout_mode = 0
+offset_left = 66.0
+offset_top = -2.0
+offset_right = 122.0
+offset_bottom = 22.0
+
+[node name="Button3" parent="." instance=ExtResource("1_tkhk7")]
+layout_mode = 0
+offset_left = 118.0
+offset_top = -2.0
+offset_right = 174.0
+offset_bottom = 22.0

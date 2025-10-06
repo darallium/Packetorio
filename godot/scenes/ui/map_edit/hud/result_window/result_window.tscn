@@ -1,0 +1,372 @@
+[gd_scene load_steps=16 format=3 uid="uid://cuh7n5qrhrux6"]
+
+[ext_resource type="Script" uid="uid://758ycsq1b55u" path="res://scenes/ui/map_edit/hud/result_window/result_window.gd" id="1_io8p4"]
+[ext_resource type="FontFile" uid="uid://2h63vwps102l" path="res://resources/theme/Rockboxcond12.ttf" id="2_838fd"]
+[ext_resource type="Texture2D" uid="uid://5v3tykprepoh" path="res://assets/images/retry.svg" id="3_cs8an"]
+[ext_resource type="Texture2D" uid="uid://cbvrljc8fsi0u" path="res://assets/images/restart.svg" id="4_nw1fc"]
+[ext_resource type="PackedScene" uid="uid://c0v4isgta7lps" path="res://scenes/ui/map_edit/hud/result_window/building_items_container.tscn" id="5_building_container"]
+
+[sub_resource type="Animation" id="Animation_cj5d4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/TopLeftRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-300, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/BottomRightRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 302)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/BottomRightRect2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(660, 286)]
+}
+
+[sub_resource type="Animation" id="Animation_4w40e"]
+resource_name = "appear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/TopLeftRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 0.0291573),
+"update": 0,
+"values": [Vector2(-300, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/BottomRightRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 0.0412348),
+"update": 0,
+"values": [Vector2(640, 302), Vector2(340, 302)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/BottomRightRect2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(660, 286), Vector2(320, 286)]
+}
+
+[sub_resource type="Animation" id="Animation_rl3qv"]
+resource_name = "disappear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/TopLeftRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.0291573, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-300, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/BottomRightRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(0.0412348, 1),
+"update": 0,
+"values": [Vector2(340, 302), Vector2(640, 302)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/BottomRightRect2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(320, 286), Vector2(660, 286)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cg8o3"]
+_data = {
+&"RESET": SubResource("Animation_cj5d4"),
+&"appear": SubResource("Animation_4w40e"),
+&"disappear": SubResource("Animation_rl3qv")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cj5d4"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cg8o3"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rl3qv"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2at8i"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1b2f"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_yypvj"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("2_838fd")
+Button/styles/disabled = SubResource("StyleBoxFlat_cj5d4")
+Button/styles/focus = SubResource("StyleBoxFlat_cg8o3")
+Button/styles/hover = SubResource("StyleBoxFlat_rl3qv")
+Button/styles/normal = SubResource("StyleBoxFlat_2at8i")
+Button/styles/pressed = SubResource("StyleBoxFlat_s1b2f")
+
+[node name="ResultWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_io8p4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72549)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cg8o3")
+}
+autoplay = "appear"
+
+[node name="TopLeftRect" type="ColorRect" parent="AnimationPlayer"]
+custom_minimum_size = Vector2(300, 50)
+offset_left = -300.0
+offset_bottom = 50.0
+color = Color(0.226707, 0.226707, 0.226707, 1)
+
+[node name="TitleLabel" type="Label" parent="AnimationPlayer/TopLeftRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -7.5
+offset_right = 31.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Result"
+
+[node name="BottomRightRect" type="ColorRect" parent="AnimationPlayer"]
+custom_minimum_size = Vector2(300, 50)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_right = 300.0
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(0.205117, 0.205117, 0.205117, 1)
+
+[node name="BottomRightRect2" type="ColorRect" parent="AnimationPlayer"]
+custom_minimum_size = Vector2(300, 50)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -66.0
+offset_right = 320.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(0.101961, 0.101961, 0.101961, 1)
+
+[node name="ScoreLabel" type="Label" parent="AnimationPlayer/BottomRightRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -7.5
+offset_right = 31.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Score: hoge"
+
+[node name="StageButton" type="Button" parent="AnimationPlayer/BottomRightRect2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -16.0
+offset_right = -11.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = SubResource("Theme_yypvj")
+icon = ExtResource("3_cs8an")
+
+[node name="RetryButton" type="Button" parent="AnimationPlayer/BottomRightRect2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -16.0
+offset_right = -53.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = SubResource("Theme_yypvj")
+icon = ExtResource("4_nw1fc")
+
+[node name="CenterContainer" type="CenterContainer" parent="AnimationPlayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -60.0
+offset_right = 130.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BuildingItemsContainer" parent="AnimationPlayer/CenterContainer" instance=ExtResource("5_building_container")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HUD" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 10

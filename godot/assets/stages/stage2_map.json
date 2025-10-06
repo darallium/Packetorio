@@ -1,0 +1,27 @@
+{
+	"meta": {
+		"width": 25.0,
+		"height": 16.0,
+		"mapname": "チュートリアル2：Scanni-ng",
+		"author": "tutorial",
+		"description": "複数の条件を組み合わせるフィルタリングの基礎を学びます。",
+		"packetsType": "json",
+		"packetsPath": "res://assets/packets/stage2_packets.json",
+		"tutorial_title": "ポートスキャン",
+		"tutorial_message": "今度は我々のデータセンターに対してポートスキャンが行われているようです。\n\n[PORT_FILTER]を使いましょう。\nこれは、指定したポート番号のパケットをブロックできます。\n\n重要な通信で使うポート以外は、ブロックしてしまいましょう。\nヒント: フィルタを2つ繋げると、両方の条件でチェックできますよ。\n"
+	},
+	"buildings": [
+		{
+			"x": 4.0,
+			"y": 4.0,
+			"blockId": 0.0,
+			"rotation": 0.0
+		},
+		{
+			"x": 15.0,
+			"y": 4.0,
+			"blockId": 1.0,
+			"rotation": 0.0
+		}
+	]
+}

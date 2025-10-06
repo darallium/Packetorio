@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://c27yb1evnql1r"]
+
+[ext_resource type="Script" uid="uid://5uri1v4myirl" path="res://scenes/ui/map_edit/hud/map_player.gd" id="1_rig3s"]
+[ext_resource type="Texture2D" uid="uid://dvy0rmnluyosu" path="res://assets/images/map_player_buttons.png" id="2_78ny2"]
+[ext_resource type="Texture2D" uid="uid://bg23v4048w4bi" path="res://assets/images/metal_plate.png" id="2_rdscy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0uk5a"]
+texture = ExtResource("2_78ny2")
+region_rect = Rect2(0, 4, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5bpv5"]
+texture = ExtResource("2_78ny2")
+region_rect = Rect2(0, 256, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ievp3"]
+texture = ExtResource("2_78ny2")
+region_rect = Rect2(0, 0, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k00p4"]
+texture = ExtResource("2_78ny2")
+region_rect = Rect2(128, 4, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xh338"]
+texture = ExtResource("2_78ny2")
+region_rect = Rect2(128, 256, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rdscy"]
+texture = ExtResource("2_78ny2")
+region_rect = Rect2(128, 0, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wxd7v"]
+texture = ExtResource("2_78ny2")
+region_rect = Rect2(384, 4, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eh0q3"]
+texture = ExtResource("2_78ny2")
+region_rect = Rect2(384, 256, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n7mgu"]
+texture = ExtResource("2_78ny2")
+region_rect = Rect2(384, 0, 128, 128)
+
+[node name="MapPlayer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rig3s")
+
+[node name="Panel" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+offset_right = 531.0
+offset_bottom = 512.0
+texture = ExtResource("2_rdscy")
+stretch_mode = 2
+
+[node name="StartButton" type="Button" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 128.0
+offset_top = 160.0
+offset_right = 192.0
+offset_bottom = 224.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_0uk5a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5bpv5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ievp3")
+
+[node name="StopButton" type="Button" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 224.0
+offset_top = 160.0
+offset_right = 288.0
+offset_bottom = 224.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_k00p4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xh338")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rdscy")
+
+[node name="SettingButton" type="Button" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 320.0
+offset_top = 160.0
+offset_right = 384.0
+offset_bottom = 224.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_wxd7v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_eh0q3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7mgu")

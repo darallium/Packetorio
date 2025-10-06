@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "width": 25,
+    "height": 16,
+    "mapname": "ステージ1 (実データ版)",
+    "author": "iru",
+    "description": "FTPブルートフォース攻撃のパケットをフィルタリングします。",
+    "packetsType": "json",
+    "packetsPath": "res://assets/packets/stage1_ftp_packets.json"
+  },
+  "buildings": [
+    { "x": 0, "y": 4, "blockId": 0, "rotation": 0 },
+    { "x": 15, "y": 4, "blockId": 1, "rotation": 0 }
+  ]
+}

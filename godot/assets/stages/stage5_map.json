@@ -1,0 +1,39 @@
+{
+	"meta": {
+		"width": 25.0,
+		"height": 16.0,
+		"mapname": "複合型電子防衛戦",
+		"author": "iru",
+		"description": "これまでの知識を総動員して、同時に発生する複数の脅威に対処します。",
+		"packetsType": "json",
+		"packetsPath": "res://assets/packets/stage5_packets.json",
+		"tutorial_title": "最終ミッション",
+		"tutorial_message": "これが最後の戦いです。\n敵は、これまで使ってきた全ての種類の攻撃を、同時に仕掛けてきました。\n\n大量のパケットでこちらの処理を遅らせ、その隙に偽装したパケットを送り込んできています。\n\n全ての設備を使い、ネットワークを守り抜いてください。\nGood luck."
+	},
+	"buildings": [
+		{
+			"x": 4.0,
+			"y": 4.0,
+			"blockId": 0.0,
+			"rotation": 0.0
+		},
+		{
+			"x": 15.0,
+			"y": 1.0,
+			"blockId": 1.0,
+			"rotation": 0.0
+		},
+		{
+			"x": 15.0,
+			"y": 7.0,
+			"blockId": 1.0,
+			"rotation": 0.0
+		},
+		{
+			"x": 7.0,
+			"y": 4.0,
+			"blockId": 1.0,
+			"rotation": 0.0
+		}
+	]
+}

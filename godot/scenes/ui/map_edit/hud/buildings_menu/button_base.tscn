@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://br2bvjywfqyw3"]
+
+[ext_resource type="Texture2D" uid="uid://bvg2kjwqnjv5q" path="res://assets/images/スプライト-0001.png" id="1_s7v4s"]
+
+[node name="Button_base" type="Button"]
+offset_right = 56.0
+offset_bottom = 24.0
+scale = Vector2(3, 3)
+icon = ExtResource("1_s7v4s")
+flat = true

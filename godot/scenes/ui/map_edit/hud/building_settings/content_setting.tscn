@@ -1,0 +1,178 @@
+[gd_scene load_steps=11 format=3 uid="uid://dthxcy6daouvf"]
+
+[ext_resource type="Script" uid="uid://cxfeplhadcqvk" path="res://scenes/ui/map_edit/hud/building_settings/content_setting.gd" id="1_0xo7s"]
+[ext_resource type="FontFile" uid="uid://2h63vwps102l" path="res://resources/theme/Rockboxcond12.ttf" id="2_xtbgr"]
+[ext_resource type="Texture2D" uid="uid://c5n2jni3ebel4" path="res://assets/images/check.svg" id="3_ku5rj"]
+[ext_resource type="Texture2D" uid="uid://ds26111cqujnv" path="res://assets/images/cancel.svg" id="4_yoly2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yt6g1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tjygr"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hr8m"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8hrxo"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ux5x4"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_34fsf"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("2_xtbgr")
+Button/styles/disabled = SubResource("StyleBoxFlat_yt6g1")
+Button/styles/focus = SubResource("StyleBoxFlat_tjygr")
+Button/styles/hover = SubResource("StyleBoxFlat_4hr8m")
+Button/styles/normal = SubResource("StyleBoxFlat_8hrxo")
+Button/styles/pressed = SubResource("StyleBoxFlat_ux5x4")
+
+[node name="PanelContainer" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -59.0
+offset_right = 125.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xo7s")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HSeparator"]
+layout_mode = 0
+offset_top = 4.5
+offset_right = 330.0
+offset_bottom = 36.5
+scale = Vector2(0.712358, 0.710575)
+theme = SubResource("Theme_34fsf")
+alignment = 2
+
+[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer/HSeparator/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 10)
+layout_mode = 2
+theme_override_colors/icon_hover_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 1, 0, 1)
+text = "
+"
+icon = ExtResource("3_ku5rj")
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer/HSeparator/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0.501961, 1)
+theme_override_colors/icon_hover_color = Color(1, 0, 0.501961, 1)
+theme_override_colors/icon_focus_color = Color(1, 0, 0.501961, 1)
+theme_override_colors/icon_normal_color = Color(1, 0, 0.501961, 1)
+icon = ExtResource("4_yoly2")
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = " Rule Editor"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ContentTitle" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Matching Content"
+
+[node name="Content" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+placeholder_text = "/.*regexp.*/"
+alignment = 1
+max_length = 30

@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://22ua5ohdntw4"]
+
+[ext_resource type="Shader" uid="uid://df1kaeb4kp1xq" path="res://resources/shaders/vinette.gdshader" id="1_oplou"]
+
+[resource]
+shader = ExtResource("1_oplou")
+shader_parameter/alpha = 0.5
+shader_parameter/inner_radius = 0.5
+shader_parameter/outer_radius = 2.0

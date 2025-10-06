@@ -1,0 +1,27 @@
+{
+	"meta": {
+		"width": 25.0,
+		"height": 16.0,
+		"mapname": "チュートリアル3：洪水",
+		"author": "tutorial",
+		"description": "JUNCTIONを使ったラインの分岐・合流による効率化を考えさせます。開放されるのはJUNCTION、Lengthフィルタ、プロトコルフィルタ",
+		"packetsType": "json",
+		"packetsPath": "res://assets/packets/stage3_packets.json",
+		"tutorial_title": "Flooding Attack",
+		"tutorial_message": "緊急事態です！大量のパケットでコンベアが詰まりそうです。\n\nよく見ると、攻撃パケットには「特定のプロトコル」で「サイズが小さい」という特徴があります。\n\n[LENGTH_FILTER]と[PROTOCOL_FILTER]を使って、特徴に合うパケットだけをブロックしましょう。\n\n[JUNCTION]は、パケットが入ってきた方向と正反対の方向にパケットを送り出します。うまく使えば、限られたスペースで複雑な経路を構築できます。"
+	},
+	"buildings": [
+		{
+			"x": 4.0,
+			"y": 4.0,
+			"blockId": 0.0,
+			"rotation": 0.0
+		},
+		{
+			"x": 15.0,
+			"y": 4.0,
+			"blockId": 1.0,
+			"rotation": 0.0
+		}
+	]
+}

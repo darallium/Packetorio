@@ -1,0 +1,12 @@
+.godot/
+*.translation
+export_presets.cfg
+icon.svg.import
+
+.DS_Store
+*.swp
+*~
+.vscode/
+
+# Windows Zone Identifier files
+*:Zone.Identifier

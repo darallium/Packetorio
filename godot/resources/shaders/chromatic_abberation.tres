@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://yw76k5hgtwny"]
+
+[ext_resource type="Shader" uid="uid://dkx8ikib8gxyh" path="res://resources/shaders/chromatic_abberation.gdshader" id="1_2fa7d"]
+
+[resource]
+shader = ExtResource("1_2fa7d")
+shader_parameter/overlay = false
+shader_parameter/aberration = 0.03
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 1.0

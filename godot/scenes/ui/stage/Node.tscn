@@ -1,0 +1,104 @@
+[gd_scene load_steps=12 format=3 uid="uid://y27wlr5ej7x0"]
+
+[ext_resource type="Script" uid="uid://c7d50mqqhbxqy" path="res://scenes/ui/stage/Node.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://2h63vwps102l" path="res://resources/theme/Rockboxcond12.ttf" id="1_11gfs"]
+[ext_resource type="Texture2D" uid="uid://dkgk1hirtqt0l" path="res://assets/images/stages/stage_button_cursor.png" id="2_mvoos"]
+[ext_resource type="Texture2D" uid="uid://b6yswvgr3g1na" path="res://assets/images/stages/stage_button_bg.png" id="2_se3ja"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mvoos"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t2rlk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mvoos"]
+texture = ExtResource("2_mvoos")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t2rlk"]
+texture = ExtResource("2_mvoos")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2a4rp"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_osodx"]
+
+[sub_resource type="Theme" id="Theme_pvv1t"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_11gfs")
+Button/styles/disabled = SubResource("StyleBoxEmpty_mvoos")
+Button/styles/focus = SubResource("StyleBoxEmpty_t2rlk")
+Button/styles/hover = SubResource("StyleBoxTexture_mvoos")
+Button/styles/hover_pressed = SubResource("StyleBoxTexture_t2rlk")
+Button/styles/normal = SubResource("StyleBoxFlat_2a4rp")
+Button/styles/pressed = SubResource("StyleBoxEmpty_osodx")
+
+[node name="Button" type="Button"]
+anchors_preset = -1
+anchor_right = 0.191
+anchor_bottom = 0.335
+offset_right = 5.75999
+offset_bottom = 10.08
+theme = SubResource("Theme_pvv1t")
+toggle_mode = true
+icon_alignment = 1
+script = ExtResource("1")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_se3ja")
+stretch_mode = 2
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -42.0
+offset_right = 42.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[connection signal="toggled" from="." to="." method="_on_Button_toggled"]

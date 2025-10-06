@@ -1,0 +1,146 @@
+[gd_scene load_steps=11 format=3 uid="uid://rs4kdtbgwahp"]
+
+[ext_resource type="Script" uid="uid://d4rge4k6kdku" path="res://scenes/ui/main_renderer.gd" id="1_08jx5"]
+[ext_resource type="Shader" uid="uid://dkx8ikib8gxyh" path="res://resources/shaders/chromatic_abberation.gdshader" id="2_ci5d3"]
+[ext_resource type="Material" uid="uid://b5tq04nut2oiw" path="res://resources/shaders/scene_transition.tres" id="2_fr3je"]
+[ext_resource type="Script" uid="uid://bwmby0e70c7bn" path="res://scenes/ui/scene_transition_anim.gd" id="3_fr3je"]
+[ext_resource type="Material" uid="uid://22ua5ohdntw4" path="res://resources/shaders/vinette.tres" id="4_ci5d3"]
+
+[sub_resource type="Animation" id="Animation_3m058"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SceneTransitionAnim/SceneTransition:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_fr3je")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SceneTransitionAnim/SceneTransition:material:shader_parameter/reverse")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_j6bfk"]
+resource_name = "transition_enter"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SceneTransitionAnim/SceneTransition:material:shader_parameter/animation_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SceneTransitionAnim/SceneTransition:material:shader_parameter/reverse")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_fr3je"]
+resource_name = "transition_exit"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SceneTransitionAnim/SceneTransition:material:shader_parameter/animation_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SceneTransitionAnim/SceneTransition:material:shader_parameter/reverse")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eoxj5"]
+_data = {
+&"RESET": SubResource("Animation_3m058"),
+&"transition_enter": SubResource("Animation_j6bfk"),
+&"transition_exit": SubResource("Animation_fr3je")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j6bfk"]
+shader = ExtResource("2_ci5d3")
+shader_parameter/overlay = false
+shader_parameter/intensity = 2.0
+shader_parameter/threshold = 1.0
+shader_parameter/discolor = false
+shader_parameter/warp_amount = -0.0499998
+
+[node name="MainRendererMargin" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_08jx5")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 2
+
+[node name="RendererViewport" type="SubViewport" parent="SubViewportContainer"]
+unique_name_in_owner = true
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(640, 352)
+render_target_update_mode = 4
+
+[node name="SceneTransitionAnim" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_eoxj5")
+}
+script = ExtResource("3_fr3je")
+
+[node name="SceneTransition" type="ColorRect" parent="SceneTransitionAnim"]
+material = ExtResource("2_fr3je")
+offset_right = 640.0
+offset_bottom = 352.0
+mouse_filter = 2
+
+[node name="ChromaticAbberation" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_j6bfk")
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Vinette" type="ColorRect" parent="."]
+material = ExtResource("4_ci5d3")
+layout_mode = 2
+mouse_filter = 2

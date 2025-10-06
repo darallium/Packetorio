@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://cao5kieu4rk0e"]
+
+[ext_resource type="Script" uid="uid://b3ko8d3ycelf7" path="res://scenes/ui/map_edit/hud/result_window/building_item.gd" id="1_building_item"]
+[ext_resource type="FontFile" uid="uid://glhdmhuptioq" path="res://assets/fonts/x12y16pxMaruMonica.ttf" id="2_7aiew"]
+[ext_resource type="FontFile" uid="uid://ca54y87dnpjpv" path="res://assets/fonts/misaki_gothic.ttf" id="3_uixjg"]
+
+[node name="BuildingItem" type="Button"]
+custom_minimum_size = Vector2(180, 40)
+script = ExtResource("1_building_item")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="IconRect" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InfoContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="NameLabel" type="Label" parent="HBoxContainer/InfoContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7aiew")
+theme_override_font_sizes/font_size = 16
+text = "Datacenter"
+vertical_alignment = 1
+
+[node name="PosLabel" type="Label" parent="HBoxContainer/InfoContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_fonts/font = ExtResource("3_uixjg")
+theme_override_font_sizes/font_size = 8
+text = "位置: (0, 0)"
+vertical_alignment = 1
